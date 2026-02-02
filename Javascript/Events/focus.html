@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Focus Event</title>
+</head>
+<body>
+
+<h2>Focus Event Example</h2>
+<input type="text" id="inputBox" placeholder="Click here">
+
+<script>
+  const input = document.getElementById("inputBox");
+
+  input.addEventListener("focus", () => {
+    input.style.backgroundColor = "lightyellow";
+  });
+</script>
+
+</body>
+</html>

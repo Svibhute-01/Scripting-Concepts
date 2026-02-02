@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+      }
+
+      .container {
+        width: 200px;
+        height: 100px;
+        background-color: #4CAF50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        color: white;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+        transition: transform 0.3s, background-color 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="box">
+      <h4 id="text">Hover me!</h4>
+    </div>
+
+    <script>
+      const box = document.getElementById("box");
+      const text=document.getElementById("text")
+
+      box.addEventListener("mouseover", () => {
+        box.style.backgroundColor = "orange";
+        text.innerHTML="Good Afternoon!"
+
+      });
+
+      box.addEventListener("mouseout", () => {
+        box.style.backgroundColor = "#4CAF50"; 
+      });
+    </script>
+  </body>
+</html>

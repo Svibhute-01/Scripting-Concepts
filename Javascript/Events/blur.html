@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blur Event</title>
+</head>
+<body>
+
+<h2>Blur Event Example</h2>
+<input type="text" id="inputBox" placeholder="Click and leave">
+
+<script>
+  const input = document.getElementById("inputBox");
+
+  input.addEventListener("blur", () => {
+    alert("Input field lost focus");
+  });
+</script>
+
+</body>
+</html>

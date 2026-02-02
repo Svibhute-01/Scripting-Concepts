@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KeyUp Event</title>
+</head>
+<body>
+
+<h2>KeyUp Event Example</h2>
+<input type="text" id="keyInput" placeholder="Type here">
+<p>Characters: <span id="count">0</span></p>
+
+<script>
+  const input = document.getElementById("keyInput");
+  const count = document.getElementById("count");
+
+  input.addEventListener("keyup", () => {
+    count.textContent = input.value.length;
+  });
+</script>
+
+</body>
+</html>

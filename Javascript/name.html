@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form onsubmit="checkVote(); return false;">
+  <h1>Check if you are eligible for vote or not</h1>
+
+  Enter Your Age:
+  <input type="text" id="age"><br><br>
+
+  <input type="submit" value="Check">
+</form>
+
+<p id="result"></p>  
+
+<script>
+  function checkVote() {
+    let age = Number(document.getElementById("age").value);
+    let result = document.getElementById("result");
+
+    if (age >= 18) {
+      result.innerHTML = "You are eligible to vote ✅";
+      result.style.color = "green";
+    } 
+    else if (age > 0) {
+      result.innerHTML = "You are NOT eligible to vote ❌";
+      result.style.color = "red";
+    } 
+    else {
+      result.innerHTML = "Please enter a valid age";
+      result.style.color = "orange";
+    }
+  }
+</script>
+
+</body>
+</html>

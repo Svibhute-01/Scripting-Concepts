@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      width: 200px;
+      height: 100px;
+      background-color: #4CAF50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      color: white;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="box">
+    <h4>Double Click Me!</h4>
+  </div>
+
+  <script>
+    const box = document.getElementById("box");
+
+    
+    box.addEventListener("dblclick", () => {
+      alert("You double-clicked the box!");
+      
+      box.style.backgroundColor = box.style.backgroundColor === "orange" ? "#4CAF50" : "orange";
+    });
+  </script>
+</body>
+</html>

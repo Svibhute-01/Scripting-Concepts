@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KeyDown Event</title>
+</head>
+<body>
+
+<h2>KeyDown Event Example</h2>
+<input type="text" id="box"/>
+
+<script>
+  const box = document.getElementById("box");
+
+  box.addEventListener("keydown", () => {
+    box.style.backgroundColor = "lightgreen";
+  });
+
+  box.addEventListener("keyup", () => {
+    box.style.backgroundColor = "white";
+  });
+</script>
+
+</body>
+</html>

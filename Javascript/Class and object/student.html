@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Student Details
+        </title>
+    </head>
+    <body><script>
+    class  Student {
+    constructor(id, name, age, course) {
+        this.id = id
+        this.name = name
+        this.age = age
+        this.course = course
+    }
+
+    display_details() {
+        console.log("Student Id " + this.id)
+        console.log("Student Name " + this.name)
+        console.log("Student Age " + this.age)
+        console.log("Student Course " + this.course)
+    }
+}
+
+var id = prompt("Enter student id")
+var name = prompt("Enter student name")
+var age = prompt("Enter student age")
+var course = prompt("Enter student course")
+
+const stu = new Student(id, name, age, course)
+
+console.log("Student Details")
+stu.display_details()
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BeforeUnload Event</title>
+</head>
+<body>
+
+<h2>Try refreshing or closing the page</h2>
+
+<script>
+  window.addEventListener("beforeunload", function (e) {
+    e.preventDefault();
+    e.returnValue = "";
+  });
+</script>
+
+</body>
+</html>

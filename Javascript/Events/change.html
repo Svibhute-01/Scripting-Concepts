@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Event</title>
+</head>
+<body>
+
+<h2>Change Event Example</h2>
+
+<select id="dropdown">
+  <option value="">Select</option>
+  <option value="Java">Java</option>
+  <option value="Python">Python</option>
+  <option value="JavaScript">JavaScript</option>
+</select>
+
+<script>
+  document.getElementById("dropdown").addEventListener("change", function () {
+    alert("You selected: " + this.value);
+  });
+</script>
+
+</body>
+</html>
