@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Throw Example</title>
+</head>
+<body>
+
+<h2>JavaScript Exception Handling</h2>
+
+<script>
+  function checkAge(age) {
+    if (age < 18) {
+      throw "Age must be 18 or above";
+    } else {
+      document.write("Access granted");
+    }
+  }
+
+  try {
+    checkAge(15);
+  } catch (error) {
+    document.write("Exception caught: " + error);
+  }
+</script>
+
+</body>
+</html>

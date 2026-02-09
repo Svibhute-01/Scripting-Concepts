@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+
+<body bgcolor="#FFEDFA">
+
+  <h1 align="center">REGISTRATION FORM</h1>
+
+  <div style="margin:10px; padding:20px;">
+    <form name="RegForm" method="post" onsubmit="return validateForm();">
+      
+      <fieldset>
+        <legend>Form</legend>
+
+        Name:<br>
+        <input type="text" name="name" autocomplete="on">
+        <br><br>
+
+        Email:<br>
+        <input type="email" name="email" autocomplete="on">
+        <br><br>
+
+        Gender:<br>
+        <select name="gender">
+          <option value="">Select</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <br><br>
+
+        Password:<br>
+        <input type="password" name="password1">
+        <br><br>
+
+        Re-Enter Password:<br>
+        <input type="password" name="password2">
+        <br><br>
+
+        <input type="submit" value="Submit"
+               style="border-radius:7px; background-color:#E195AB;">
+      </fieldset>
+
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+
+      var name = document.RegForm.name.value.trim();
+      var email = document.RegForm.email.value.trim();
+      var gender = document.RegForm.gender.value;
+      var pass1 = document.RegForm.password1.value;
+      var pass2 = document.RegForm.password2.value;
+
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (name === "") {
+        alert("Name cannot be empty");
+        return false;
+      }
+
+      if (email === "") {
+        alert("Email cannot be empty");
+        return false;
+      }
+
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address");
+        return false;
+      }
+
+      if (gender === "") {
+        alert("Please select your gender");
+        return false;
+      }
+
+      if (pass1.length < 6) {
+        alert("Password must be at least 6 characters long");
+        return false;
+      }
+
+      if (pass1 !== pass2) {
+        alert("Passwords do not match");
+        return false;
+      }
+
+      alert("Registration successful!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>
